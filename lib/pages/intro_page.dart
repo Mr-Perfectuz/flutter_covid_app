@@ -17,7 +17,7 @@ class _IntroPageState extends State<IntroPage> {
             gradient: LinearGradient(
               colors: [
                 AppColors.mainColor,
-                AppColors.mainColor.withOpacity(.1),
+                AppColors.mainColor.withOpacity(.5),
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -34,7 +34,7 @@ class _IntroPageState extends State<IntroPage> {
               Positioned(
                 bottom: 50,
                 child: Container(
-                  width: MediaQuery.of(context).size.width
+                  width: MediaQuery.of(context).size.width,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -55,6 +55,26 @@ class _IntroPageState extends State<IntroPage> {
                           height: 1.5,
                         ),
                         textAlign: TextAlign.center,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20),
+                          ),
+                        ),
+                        width: MediaQuery.of(context).size.width * .85,
+                        height: 60,
+                        child: Center(
+                          child: Text(
+                            "GET STARTED",
+                            style: TextStyle(
+                              color: AppColors.mainColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
